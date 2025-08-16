@@ -4,8 +4,8 @@ import { getCabins } from '../../services/apiCabins';
 
 export function useFetchCabins() {
   const {
-    isPending: isLoading,
     data: cabins,
+    isPending: isLoading,
     error,
   } = useQuery({
     queryKey: ['cabins'],
