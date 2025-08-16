@@ -9,6 +9,10 @@ export async function getBookings({ filter, sortBy }) {
     );
 
   if (filter) query = query[filter.method || 'eq'](filter.field, filter.value);
+  if (sortBy)
+    query = query.order(sortBy.field, {
+      ascending: sortBy.direction === 'ascending',
+    });
 
   const { data, error } = await query;
 
