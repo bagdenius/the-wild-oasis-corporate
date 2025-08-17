@@ -10,7 +10,7 @@ export function useFetchBooking() {
     isPending: isLoading,
     error,
   } = useQuery({
-    queryKey: ['bookings'],
+    queryKey: ['bookings', bookingId],
     queryFn: () => getBooking(bookingId),
     retry: false,
   });
