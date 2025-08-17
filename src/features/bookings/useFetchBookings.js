@@ -32,7 +32,6 @@ export function useFetchBookings() {
     queryKey: ['bookings', filter, sortBy, page],
     queryFn: () => getBookings({ filter, sortBy, page }),
   });
-  console.log(bookings);
 
   // pre-fetching next and previous pages
   const pageCount = Math.ceil(count / BOOKINGS_PAGE_SIZE);
