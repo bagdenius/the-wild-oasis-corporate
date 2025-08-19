@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import DashboardBox from './DashboardBox';
-import Heading from '../../ui/Heading';
+import { eachDayOfInterval, format, isSameDay, subDays } from 'date-fns';
 import {
   Area,
   AreaChart,
@@ -10,8 +9,11 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+
+import DashboardBox from './DashboardBox';
+import Heading from '../../ui/Heading';
+
 import { useDarkMode } from '../../context/darkModeContext,';
-import { eachDayOfInterval, format, isSameDay, subDays } from 'date-fns';
 
 const StyledSalesChart = styled(DashboardBox)`
   grid-column: 1 / -1;
@@ -59,7 +61,10 @@ const SalesChart = ({ bookings, numberOfDays }) => {
 
   return (
     <StyledSalesChart>
-      <Heading as='h2'>Sales</Heading>
+      <Heading as='h2'>
+        Sales from {format(allDates.at(0), 'MMM dd yyyy')} &mdash;{' '}
+        {format(allDates.at(-1), 'MMM dd yyyy')}
+      </Heading>
       <ResponsiveContainer height={300} width='100%'>
         <AreaChart data={data}>
           <XAxis
