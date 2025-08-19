@@ -149,14 +149,14 @@ const DurationChart = ({ confirmedStays }) => {
   return (
     <ChartBox>
       <Heading as='h2'>Stay duration summary</Heading>
-      <ResponsiveContainer width='100%' height={250}>
+      <ResponsiveContainer width='100%' height='85%'>
         <PieChart>
           <Pie
             data={data}
             nameKey='duration'
             dataKey='value'
-            innerRadius={85}
-            outerRadius={110}
+            innerRadius='70%'
+            outerRadius='90%'
             cx='40%'
             cy='50%'
             paddingAngle={3}
@@ -175,7 +175,7 @@ const DurationChart = ({ confirmedStays }) => {
             align='right'
             width='30%'
             layout='vertical'
-            iconSize={15}
+            iconSize='1rem'
             iconType='circle'
           />
         </PieChart>
