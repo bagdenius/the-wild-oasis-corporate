@@ -1,7 +1,11 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
+
 import LoginForm from '../features/authentication/LoginForm';
 import Logo from '../ui/Logo';
 import Heading from '../ui/Heading';
+
+import { useDarkMode } from '../context/DarkModeContext';
 
 const LoginLayout = styled.main`
   min-height: 100vh;
@@ -14,6 +18,18 @@ const LoginLayout = styled.main`
 `;
 
 function Login() {
+  const { isDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark-mode');
+      document.documentElement.classList.remove('light-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+      document.documentElement.classList.remove('dark-mode');
+    }
+  }, [isDarkMode]);
+
   return (
     <LoginLayout>
       <Logo />
