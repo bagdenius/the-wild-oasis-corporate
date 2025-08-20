@@ -18,7 +18,7 @@ const StyledDashboardLayout = styled.div`
 `;
 
 const DashboardLayout = () => {
-  const { cabins, isLoadingCabins } = useFetchCabins();
+  const { cabins, isLoading: isLoadingCabins } = useFetchCabins();
   const { bookings, isLoading: isLoadingBookings } = useRecentBookings();
   const {
     confirmedStays,
