@@ -18,6 +18,7 @@ import Checkin from './pages/Checkin';
 
 import AppLayout from './ui/AppLayout';
 import ProtectedRoute from './ui/ProtectedRoute';
+
 import { DarkModeProvider } from './context/DarkModeContext';
 
 const queryClient = new QueryClient({
