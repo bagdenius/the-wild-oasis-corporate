@@ -1,5 +1,6 @@
 # Credentials for testing
 email address: guest@user.com
+
 password: guestuser
 
 # React + Vite
