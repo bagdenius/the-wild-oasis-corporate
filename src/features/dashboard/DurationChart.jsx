@@ -9,7 +9,7 @@ import {
 import styled from 'styled-components';
 
 import Heading from '../../ui/Heading';
-import { useDarkMode } from '../../context/darkModeContext,';
+import { useDarkMode } from '../../context/DarkModeContext';
 
 const ChartBox = styled.div`
   /* Box */
