@@ -128,12 +128,12 @@ function Uploader() {
   return (
     <div
       style={{
+        display: 'none',
         marginTop: 'auto',
         backgroundColor: '#e0e7ff',
         padding: '8px',
         borderRadius: '5px',
         textAlign: 'center',
-        display: 'flex',
         flexDirection: 'column',
         gap: '8px',
       }}
